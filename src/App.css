@@ -2,6 +2,13 @@
 body{
   font-family: "Poppins", serif;
 }
-.mobile::-webkit-scrollbar {
+.bike::-webkit-scrollbar {
   display: none;
+}
+.footer{
+  background-color: #002b51
+}
+.offer{
+  background-color: #ecf9f8;
+  border:1px solid  #7fd7cf;
 }

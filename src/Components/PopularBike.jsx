@@ -53,7 +53,6 @@ const products = [
 ];
 
 const PopularBike = () => {
-  // const navigate = useNavigate();
   const [filteredProducts, setFilteredProducts] = useState(products);
   const containerRef = useRef(null);
 
@@ -68,19 +67,6 @@ const PopularBike = () => {
       containerRef.current.scrollBy({ left: 250, behavior: "smooth" }); 
     }
   };
-
-  // const applyFilter = (filterType) => {
-  //   if (filterType === "bestSeller") {
-  //     setFilteredProducts(products.filter((product) => product.bestSeller));
-  //   } else if (filterType === "is5G") {
-  //     setFilteredProducts(products.filter((product) => product.is5G));
-  //   } else if (filterType === "brand") {
-  //     setFilteredProducts(products.filter((product) => product.brand === "Apple"));
-  //   } else {
-  //     setFilteredProducts(products);
-  //   }
-  // };
-
   return (
     <>
       <div className="p-4">
@@ -97,7 +83,7 @@ const PopularBike = () => {
           {/* Product Cards */}
           <div
             ref={containerRef}
-            className="flex space-x-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory mobile"
+            className="flex space-x-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory bike"
           >
             {filteredProducts.map((product) => {
               return (

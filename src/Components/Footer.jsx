@@ -9,10 +9,10 @@ import {
 
 const Footer = () => {
   return (
-    <footer className=" text-white py-8  bg-blue-900">
-      <div className="container mx-auto px-4">
+    <footer className=" text-white py-8 footer">
+      <div className="container mx-auto p-8 ">
         {/* Language & Links */}
-        <div className="flex flex-col md:flex-row justify-between items-center border-b border-blue-800 pb-4 mb-4">
+        <div className="flex flex-col md:flex-row justify-between items-center border-b border-blue-900 pb-4 mb-4">
           <div className="flex gap-4">
             <span>Language: </span>
             <a href="#" className="hover:underline">
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         {/* Social Links & App Download */}
-        <div className="flex flex-col md:flex-row justify-between items-center border-b border-blue-800 pb-4 mb-4">
+        <div className="flex flex-col md:flex-row justify-between items-center border-b border-blue-900 pb-4 mb-4">
           <div className="items-center gap-4">
             <span className="text-gray-400">CONNECT WITH US</span>
             <div className="flex gap-4">
@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
 
         {/* Logo & Affiliates */}
-        <div className="flex flex-col md:flex-row justify-between items-center border-b border-blue-800 pb-4 mb-4">
+        <div className="flex flex-col md:flex-row justify-between items-center border-b border-blue-900 pb-4 mb-4">
           <div className="flex flex-wrap gap-6 justify-center">
             <a href="/" className="hover:opacity-80">
             BikeWale

@@ -100,29 +100,21 @@ const UserReviews = () => {
       containerRef.current.scrollBy({ left: 250, behavior: "smooth" }); 
     }
   };
-
-  // const applyFilter = (filterType) => {
-  //   if (filterType === "bestSeller") {
-  //     setFilteredProducts(products.filter((product) => product.bestSeller));
-  //   } else if (filterType === "is5G") {
-  //     setFilteredProducts(products.filter((product) => product.is5G));
-  //   } else if (filterType === "brand") {
-  //     setFilteredProducts(products.filter((product) => product.brand === "Apple"));
-  //   } else {
-  //     setFilteredProducts(products);
-  //   }
-  // };
-
   return (
     <>
       <div className="p-4">
-        <h2 className="text-2xl font-bold mb-4">Featured Bikes</h2>
-      <div className="flex mb-4 flex-wrap gap-2">
-        <button className="px-4 py-2 font-medium border-b-2 border-teal-500">TRENDING</button>
-        <button className="px-4 py-2 font-medium">POPULAR</button>
-        <button className="px-4 py-2 font-medium">ELECTRIC</button>
-        <button className="px-4 py-2 font-medium">UPCOMING</button>
-      </div>
+
+<h2 className="text-2xl font-bold mb-4">User Reviews</h2>
+        <p className="text-gray-600 mb-6">
+          3000+ unbiased, verified reviews from bike owners. Know the pros and
+          cons of 200+ bike models from real owners.
+        </p>
+        <input
+          type="text"
+          placeholder="Search bike e.g. Bajaj Dominar 400"
+          className="w-full p-3 border border-gray-300 rounded-lg mb-6"
+        />
+
         <div className="relative flex items-center">
           {/* Left Button */}
           <button
@@ -135,7 +127,7 @@ const UserReviews = () => {
           {/* Product Cards */}
           <div
             ref={containerRef}
-            className="flex space-x-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory mobile"
+            className="flex space-x-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory bike"
           >
             {filteredProducts.map((product) => {
               return (
@@ -180,7 +172,7 @@ const UserReviews = () => {
           </button>
         </div>
       </div>
-      <div className="bg-teal-200 border flex flex-col md:flex-row justify-between items-center px-2 py-4">
+      <div className="flex flex-col md:flex-row justify-between items-center px-2 py-4 offer">
         <div>
           <p>Stand a Chance to Win</p>
           <p className="text-gray-500">Write a detailed review and win</p>
