@@ -1,28 +1,26 @@
 import './App.css'
-import BrowseBikes from './Components/BrowseBikes'
 import Feature from './Components/Feature'
-import Footer from './Components/Footer'
-import Hero from './Components/Hero'
+import Home from './Components/Home'
 import Navbar from './Components/Navbar'
-import Onroad from './Components/Onroad'
 import PopularBike from './Components/PopularBike'
+import ProductDetails from './Components/ProductDetails'
 import Trending from './Components/Trending'
-import Update from './Components/Update'
-import UserReviews from './Components/UserReviews'
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-    <Navbar/>
-    <Hero/>
-      <Feature/>
-      <PopularBike/>
-      <BrowseBikes/>
-      <Onroad/>
-      <Trending/>
-      <UserReviews/>
-      <Update/>
-      <Footer/>
+      <Navbar />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/feature" element={<Feature />} />
+          <Route path="/popular" element={<PopularBike />} />
+          <Route path="/trending" element={<Trending />} />
+          <Route path="/feature/:category/:name" element={<ProductDetails />} />
+          <Route path="/trending/:category/:name" element={<ProductDetails />} />
+          <Route path="/popular/:name" element={<ProductDetails />} />
+        </Routes>
+      </Router>
     </>
   )
 }

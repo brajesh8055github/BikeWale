@@ -8,8 +8,6 @@ import bike5 from "../Images/hunter-350-right-side-view-5.webp";
 import bike6 from "../Images/mt-15-right-side-view-3.webp";
 import bike7 from "../Images/r15-right-side-view-7.webp";
 import bike8 from "../Images/raider-125-right-side-view-20 (1).webp";
-import bike9 from "../Images/sp-125-right-side-view-2.webp";
-import bike10 from "../Images/xtreme-125r-right-side-view-4.webp";
 
 const products = [
   { title: "Aprilia Tuono 457 Launch Soon - What to expect?", description: "The Aprilia Tuono 457 will be powered by the same 457cc liquid-cooled", author:"By Ajinkya Lad", image: bike1, category: "NEWS" },
@@ -52,7 +50,7 @@ const Update = () => {
   return (
     <>
       <div className="p-4">
-        <h2 className="text-2xl font-bold mb-4">Featured Bikes</h2>
+        <h2 className="text-2xl font-bold mb-4">Latest Updates</h2>
 <div className="flex mb-4 flex-wrap gap-2">
           <button
             onClick={() => filterByCategory("ALL")}

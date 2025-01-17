@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useState, useRef } from "react";
-import data from "./data"; 
+import data from "./data";
 
 const Trending = () => {
   const [activeTab, setActiveTab] = useState("MILEAGE");
+  const navigate = useNavigate();
   const containerRef = useRef(null);
 
   const scrollLeft = () => {
@@ -33,6 +35,7 @@ const Trending = () => {
       {/* Tab Navigation */}
       <div className="flex mb-4 flex-wrap gap-2">
         {["MILEAGE", "SPORTS", "CRUISERS"].map((tab) => (
+
           <button
             key={tab}
             className={`px-4 py-2 font-medium ${
@@ -58,32 +61,29 @@ const Trending = () => {
         <FaChevronRight size={20} />
       </button>
 
-      {/* Tab Content */}
-      <div
+       <div
         ref={containerRef}
-        className="flex space-x-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory bike"
-      >
-        {currentData.map((product, index) => (
+          className="flex space-x-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory bike"   >
+        {currentData.map((product) => (
           <div
-            key={index}
+            key={product.id}
             className="min-w-[250px] bg-white shadow-md rounded-md flex-shrink-0 cursor-pointer snap-center"
+            onClick={() => navigate(`/trending/${product.category}/${product.name}`)} 
           >
             <img
               src={product.image}
               alt={product.name}
               className="w-full h-40 object-cover rounded-md mb-4"
             />
-            <div className="bg-gray-100">
-              <div className="p-2">
+            <div className="bg-gray-100 p-2">
               <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
               <p className="text-teal-500 font-medium">
                 {product.price} <span className="text-gray-400">Onwards</span>
               </p>
               <p>Avg. Ex-Showroom price</p>
               <button className="border text-teal-500 px-2 py-1 bg-white">
-                Check on-road price
-              </button>
-            </div>
+                  Get best offer
+                </button>
             </div>
           </div>
         ))}
